@@ -4,13 +4,13 @@ import fileHandler
 
 path = "./input/random_test.txt"
 
-test_min = 5
-test_max = 5
+test_min = 50
+test_max = 50
 
-items_min = 100
-items_max = 200
+items_min = 25
+items_max = 500
 
-item_min = 400
+item_min = 20
 item_max = 1000
 
 content = ""
