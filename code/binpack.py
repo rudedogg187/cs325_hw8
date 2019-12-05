@@ -2,6 +2,7 @@ import timer
 import fileHandler
 import binAlgorithms
 import cleanup
+import sys
 
 
 def consoleResult(t, capacity, items, data):
@@ -18,10 +19,10 @@ def writeLog(log):
 
   fileHandler.writeCsv("log.csv", content)
 
-def main():
+def main(path):
   results = []
-  path = "./input/bin2.txt"
-  path = "./input/random_test.txt"
+  #path = "./input/bin2.txt"
+  #path = "./input/random_test.txt"
   tests = fileHandler.parseFile(path)
   for i in range(0, len(tests[0:30000])):
     test = tests[i]
@@ -50,4 +51,7 @@ def main():
   cleanup.pyc()
 
 if __name__ == "__main__":
-  main()
+  path = "bin.txt"
+  if len(sys.argv) > 1:
+    path = sys.argv[1]
+  main(path)
